@@ -1,63 +1,83 @@
-nav {  
-    background-color: #f0f0f0;  
-    border-radius: 20px;  
-    width: 100%;  
+/* Basic Header Styling */  
+header {  
+    background: linear-gradient(to right, #ADD8E6, #E0B0FF, #FF69B4); /* Gradient Background */  
+    color: #000080; /* Dark Blue Text */  
+    padding: 10px 20px;  
+}  
+
+.header-container {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    max-width: 1200px; /* Adjust as needed */  
     margin: 0 auto;  
 }  
 
-nav ul {  
-    list-style: none;  
-    padding: 0;  
+/* Logo and Text Section */  
+.logo-section {  
+    display: flex;  
+    align-items: center;  
+}  
+
+.logo-section img {  
+    width: 50px; /* Adjust logo size */  
+    margin-right: 15px;  
+}  
+
+.header-text h1 {  
+    font-size: 1.2em; /* Adjust font size */  
     margin: 0;  
-    display: flex; /* Use flexbox for horizontal menu items */  
-    justify-content: space-around; /* Distribute items evenly */  
 }  
 
-nav ul li {  
-    position: relative; /* Required for absolute positioning of submenu */  
+.header-text h2 {  
+    font-size: 1.5em; /* Adjust font size */  
+    margin: 0;  
+}  
+
+.header-text p {  
+    font-size: 0.9em; /* Adjust font size */  
+    margin: 0;  
+}  
+
+/* Right Section (Links and Buttons) */  
+.right-section {  
+    display: flex;  
+    align-items: center;  
+}  
+
+.right-section a {  
+    color: #000080;  
+    text-decoration: none;  
+    margin-right: 15px;  
+    font-size: 1em;  
+}  
+
+/* Search and Accessibility Buttons */  
+.search-button, .accessibility-button {  
+    background-color: #000; /* Black */  
+    color: #fff;  
+    border: none;  
     padding: 10px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    margin-left: 10px;  
+}  
+.accessibility-button {  
+    background-color: #4267B2; /* Blue */  
 }  
 
-nav ul li a {  
-    display: block;  
-    padding: 10px 20px;  
-    text-decoration: none;  
-    color: #333;  
+.search-button img, .accessibility-button img {  
+    width: 20px; /* Adjust icon size */  
 }  
 
-nav ul li a:hover {  
-    background-color: #ddd;  
-}  
+/* Responsive adjustments (example) */  
+@media (max-width: 768px) {  
+    .header-container {  
+        flex-direction: column; /* Stack items on smaller screens */  
+        align-items: flex-start;  
+    }  
 
-/* Style for the dropdown menus */  
-nav ul li ul {  
-    display: none; /* Hidden by default */  
-    position: absolute;  
-    top: 100%;  
-    left: 0;  
-    background-color: #f9f9f9;  
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
-    z-index: 1;  
-    min-width: 200px;  
-}  
-
-nav ul li:hover > ul {  
-    display: block; /* Show submenu on hover */  
-}  
-
-nav ul li ul li {  
-    padding: 0;  
-    border: 1px solid #ddd;  
-}  
-
-nav ul li ul li a {  
-    padding: 12px 16px;  
-    text-decoration: none;  
-    display: block;  
-    color: #333;  
-    white-space: nowrap; /* Prevent text wrapping */  
-}  
-
-nav ul li ul li a:hover {  
-    background-color: #ddd;  
+    .right-section {  
+        margin-top: 10px;  
+    }  
 }  
